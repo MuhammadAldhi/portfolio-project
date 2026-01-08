@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import NameOfLogo from "./NameOfLogo";
 
 const nameList = [
@@ -19,15 +19,15 @@ function ListOfNav() {
             <ul className="flex gap-6 text-text">
                 {nameList.map((name, index) => (
                     <li key={index} className="relative group font-semibold cursor-pointer">
-                        <a
-                            href={name.url}
+                        <Link
+                            to={name.url}
                             className="inline-block transition-all duration-300 ease-in-out 
                                group-hover:text-white 
                                group-hover:drop-shadow-[0_0_10px_#fff] 
                                group-hover:-translate-y-1"
                         >
                             {name.title}
-                        </a>
+                        </Link>
 
                         {/* Animasi Garis Bawah Neon */}
                         <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white 
@@ -46,15 +46,15 @@ function ListOfMenu() {
             <ul className="flex gap-6 text-text">
                 {nameListHome.map((name, index) => (
                     <li key={index} className="relative group font-semibold cursor-pointer">
-                        <a
-                            href={name.url}
+                        <Link
+                            to={name.url}
                             className="inline-block transition-all duration-300 ease-in-out 
                                group-hover:text-white 
                                group-hover:drop-shadow-[0_0_10px_#fff] 
                                group-hover:-translate-y-1"
                         >
                             {name.title}
-                        </a>
+                        </Link>
 
                         {/* Animasi Garis Bawah Neon */}
                         <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white 

@@ -1,3 +1,6 @@
+import { Link } from 'react-router-dom';
+
+
 import profilPict from '../assets/action.png'
 
 export default function Home() {
@@ -31,8 +34,8 @@ export default function Home() {
                             <div className="flex flex-col gap-4 mt-8 w-full justify-center sm:justify-start lg:flex-row">
 
                                 <div className="relative group">
-                                    <a
-                                        href="/portfolio"
+                                    <Link
+                                        to="/portfolio"
                                         className="w-full sm:w-auto relative bg-secondary text-text px-8 py-3 rounded-full text-md font-bold cursor-pointer 
                                    border-2 border-white/20 transition-all duration-300 inline-block
                                    hover:bg-white hover:text-secondary 
@@ -40,7 +43,7 @@ export default function Home() {
                                    hover:scale-105 active:scale-95"
                                     >
                                         My Portfolio
-                                    </a>
+                                    </Link>
                                 </div>
 
                                 <div className="relative group">
