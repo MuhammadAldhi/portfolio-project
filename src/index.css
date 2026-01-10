@@ -11,3 +11,26 @@
   --color-secondary: #5f2872;
   --color-accent: #ab57c9;
 }
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+/* index.css atau App.css */
+
+.animate-marquee-custom {
+  display: flex;
+  width: max-content; /* Memastikan konten memanjang ke samping, bukan wrap ke bawah */
+  animation: marquee-infinite 30s linear infinite;
+}
+
+@keyframes marquee-infinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Geser sebanyak -50% karena kita menduplikasi array [...listTools, ...listTools] */
+    transform: translateX(-50%);
+  }
+}

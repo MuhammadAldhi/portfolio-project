@@ -7,7 +7,6 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import NotFound from './components/NotFound';
-import Portfolio from './pages/Portfolio';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer'
 
@@ -19,9 +18,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
 
           {/* Route untuk 404 Not Found */}
