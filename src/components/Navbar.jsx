@@ -33,7 +33,7 @@ export default function Navbar() {
 
             {/* Mobile Nav */}
 
-            <div className={`fixed bg-accent/20 backdrop-blur-lg border-r border-white/10 h-screen transition-all duration-500 z-50 ${isOpen ? 'w-full' : 'w-0'}`}>
+            <div className={`fixed md:hidden bg-accent/20 backdrop-blur-lg border-r border-white/10 h-screen transition-all duration-500 z-50 ${isOpen ? 'w-full' : 'w-0'}`}>
 
                 <div className={`flex h-screen transition-all duration-1000 overflow-hidden ${isOpen ? 'justify-between px-10 w-full' : 'justify-end w-5'}`}>
                     {isOpen && (
@@ -41,7 +41,7 @@ export default function Navbar() {
 
                             <h2 className="text-2xl text-center font-bold mt-10">Menu Navigasi</h2>
 
-                            <ul className="flex gap-6 mt-10 -ml-2 text-text">
+                            <ul className="flex gap-6 mt-10 -ml-2 q text-text">
                                 {nameList.map((name, index) => (
                                     <li key={index} className="relative group font-semibold cursor-pointer">
                                         <a href={name.url} className="scroll-smooth inline-block transition-all duration-300 group-hover:text-white group-hover:drop-shadow-[0_0_10px_#fff] group-hover:-translate-y-1">
