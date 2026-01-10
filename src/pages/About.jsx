@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import profilPick from '../assets/actor.png'
+import profilPict from '../assets/action.png'
 import { listTools } from '../assets/data'
 
 const About = () => {
@@ -25,20 +25,23 @@ const About = () => {
           </div>
 
           {/* Main Card */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-white/5 backdrop-blur-md border border-white/10 p-8 md:p-12 rounded-4xl shadow-2xl relative">
+          <div className="grid grid-cols-1 p-8 lg:grid-cols-12 gap-12 items-center bg-white/5 backdrop-blur-md border border-white/10 md:p-16 rounded-4xl shadow-2xl relative">
 
             <div className="flex justify-center lg:hidden relative">
               {/* Glow Effect tetap di belakang (z-0) */}
               <div className="absolute -inset-6 bg-linear-to-tr from-blue-600/40 to-purple-600/40 rounded-full blur-3xl opacity-60"></div>
 
               {/* Foto dipastikan di depan dengan z-10 dan shadow yang lebih bold */}
-              <div className='border-2 border-white/30 shadow-2xl flex justify-center rounded-2xl w-full'>
-                <img
-                  src={profilPick}
-                  className="relative z-10 w-80 h-80 object-cover shadow-blue-500/20"
-                  alt="Profile"
-                />
+              <div className='flex justify-center items-center overflow-visible'>
+                <div className='w-48 h-48 sm:w-70 sm:h-70 flex justify-center overflow-hidden rounded-3xl transition-all duration-1000 shadow-[0_0_40px_rgba(255,255,255,1),0_0_20px_rgba(255,255,255,0.8)] hover:shadow-[0_0_100px_rgba(255,255,255,1),0_0_40px_rgba(255,255,255,0.8)] group'>
+                  <img
+                    src={profilPict}
+                    alt="profilPict"
+                    className='object-cover object-top scale-100 h-50 pt-2 transition-transform duration-1000 group-hover:scale-[1.40]'
+                  />
+                </div>
               </div>
+
             </div>
 
 
@@ -72,16 +75,26 @@ const About = () => {
             </div>
 
             {/* Image Section Laptop */}
-            <div className="lg:col-span-5 hidden lg:flex justify-center relative">
-              <div className="absolute -inset-4 bg-linear-to-tr from-blue-600/30 to-purple-600/30 rounded-full blur-2xl opacity-50"></div>
-              <img src={profilPick} className="relative w-80 h-80 rounded-2xl object-cover border-2 border-white/20" alt="Profile" />
+            <div className='hidden lg:flex px-8 justify-center items-center overflow-visible lg:col-span-5 relative'>
+              <div className='w-full h-full flex justify-center overflow-hidden rounded-3xl transition-all duration-1000 shadow-[0_0_40px_rgba(255,255,255,1),0_0_20px_rgba(255,255,255,0.8)] hover:shadow-[0_0_100px_rgba(255,255,255,1),0_0_40px_rgba(255,255,255,0.8)] group'>
+                <img
+                  src={profilPict}
+                  alt="profilPict"
+                  className='object-cover object-top scale-100 h-50 pt-2 transition-transform duration-1000 group-hover:scale-[1.40]'
+                />
+              </div>
             </div>
+
+            {/* <div className="lg:col-span-5 hidden lg:flex justify-center relative">
+              <div className="absolute -inset-4 bg-linear-to-tr from-blue-600/30 to-purple-600/30 rounded-full blur-2xl opacity-50"></div>
+              <img src={profilPict} className="relative w-80 h-80 rounded-2xl object-cover border-2 border-white/20" alt="Profile" />
+            </div> */}
 
 
             {/* --- BAGIAN MARQUEE TOOLS --- */}
             <div className="lg:col-span-12 min-h-fit bg-white/5 rounded-2xl border border-white/10 p-6 relative overflow-hidden"> {/* Tambahkan overflow-hidden di sini */}
               <p className="text-text/50 text-sm border-b-2 w-fit text-center font-bold uppercase tracking-widest">
-                Main Stack
+                Menguasai
               </p>
 
               <div className="flex w-full overflow-hidden"> {/* Container pembungkus utama */}
