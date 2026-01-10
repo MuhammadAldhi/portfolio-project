@@ -98,7 +98,7 @@ export default function Navbar({ }) {
 
 
                                 {/* Animasi Garis Bawah Neon */}
-                                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white 
+                                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white 
                                  shadow-[0_0_8px_#fff] transition-all duration-300 
                                  group-hover:w-full"></span>
                             </li>
